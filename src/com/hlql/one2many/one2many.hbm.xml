@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hlql.one2many">
+	<class name="Employee">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+	</class>
+	<class name="Department">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<!-- 
+			针对不同类型的集合，使用对应的元素来配置
+			Set - set元素
+			List - bag元素
+			
+			key:表示one方在many方的外键列名
+		 -->
+		<set name="emps">
+			<key column="dept_id"/>
+			<one-to-many class="Employee" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hlql.many2many">
+	<class name="Student">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<!-- 
+			table：中间表（多对多）
+			key:自己在中间表中的外键列名
+		 -->
+		<set name="teachers" table="student_teacher" inverse="true">
+			<key column="stu_id" />
+			<many-to-many class="Teacher" column="teach_id"/>
+		</set>
+	</class>
+	<class name="Teacher">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<set name="students" table="student_teacher">
+			<key column="teach_id"/>
+			<many-to-many class="Student" column="stu_id"/>
+		</set>
+	</class>
+</hibernate-mapping>

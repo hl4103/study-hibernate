@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- <mapping resource="com/hlql/oid/Person.hbm.xml" /> -->
+		<!-- <mapping resource="com/hlql/mapping/User.hbm.xml" /> -->
+		<!-- <mapping resource="com/hlql/many2one/many2one.hbm.xml" /> -->
+		<!-- <mapping resource="com/hlql/one2many/one2many.hbm.xml" /> -->
+		<!-- <mapping resource="com/hlql/many2oneone2many/many2oneone2many.hbm.xml" /> -->
+		<!-- <mapping resource="com/hlql/enum01/enum01.hbm.xml" /> -->
+		<mapping resource="com/hlql/many2many/many2many.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

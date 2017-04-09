@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hlql.enum01">
+	<class name="Employee">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<property name="sex">
+			<!-- 枚举的中间类型 -->
+			<type name="org.hibernate.type.EnumType">
+				<!-- 枚举中对应java中的类型 -->
+				<param name="enumClass">com.hlql.enum01.Gender</param>
+				<!-- 是否存储枚举中的常量名称 -->
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+		<component name="address">
+			<property name="province"></property>
+			<property name="city"></property>
+			<property name="district"></property>
+		</component>
+		<component name="bornAddress">
+			<property name="province" column="bornprovince"></property>
+			<property name="city" column="borncity"></property>
+			<property name="district" column="borndistrict"></property>
+		</component>
+	</class>
+</hibernate-mapping>

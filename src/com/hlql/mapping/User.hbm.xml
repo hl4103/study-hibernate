@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hlql.mapping">
+	<class name="User">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<set name="emailSet" table="user_emails">
+			<key column="user_id" />
+			<element column="address" type="string" />
+		</set>
+		<list name="emailList" table="user_emails_list">
+			<key column="user_id" />
+			<index column="idx" />
+			<element column="address" type="string" />
+		</list>
+		<bag name="emailBag" table="user_emails_bag">
+			<key column="user_id" />
+			<element column="address" type="string" />
+		</bag>
+	</class>
+</hibernate-mapping>
