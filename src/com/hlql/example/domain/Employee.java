@@ -15,5 +15,5 @@ public class Employee {
 	private BigDecimal salary;
 	private Date hireDate;
 	
-	private Department department;
+	private Department dept;
 }

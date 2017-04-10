@@ -19,5 +19,5 @@ public class Department {
 
 	private Employee manager;
 	
-	private List<Employee> emps = new ArrayList<Employee>();
+	private List<Employee> employees = new ArrayList<Employee>();
 }

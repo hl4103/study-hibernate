@@ -10,6 +10,7 @@
 		<!-- <mapping resource="com/hlql/one2many/one2many.hbm.xml" /> -->
 		<!-- <mapping resource="com/hlql/many2oneone2many/many2oneone2many.hbm.xml" /> -->
 		<!-- <mapping resource="com/hlql/enum01/enum01.hbm.xml" /> -->
-		<mapping resource="com/hlql/many2many/many2many.hbm.xml" />
+		<!-- <mapping resource="com/hlql/many2many/many2many.hbm.xml" /> -->
+		<mapping resource="com/hlql/example/domain/example.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
