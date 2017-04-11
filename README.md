@@ -1,10 +1,10 @@
 # lombok插件安装.
 ## 使用说明参见
-	[官方文档](https://projectlombok.org)
+[官方文档](https://projectlombok.org)
 ## 源码参见
-	[Github](https://github.com/rzwitserloot/lombok)
+[Github](https://github.com/rzwitserloot/lombok)
 ## 下载
-	[官方下载](https://projectlombok.org/download.html)
+[官方下载](https://projectlombok.org/download.html)
 ## 安装
 ### maven中央仓库
 	<dependencies>
@@ -26,4 +26,4 @@
 	3. 重启eclipse.如报错点击菜单Project->clean
 	4. ubuntu系统如果还是报错,可以重启下机器.window系统自寻解决方法.
 ### 引用
-	1. [eclipse安装部分内容参照](http://stackoverflow.com/questions/22310414/how-to-configure-lombok-in-eclipse-luna)
+[eclipse安装部分内容参照](http://stackoverflow.com/questions/22310414/how-to-configure-lombok-in-eclipse-luna)
