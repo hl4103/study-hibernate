@@ -12,5 +12,7 @@
 		<!-- <mapping resource="com/hlql/enum01/enum01.hbm.xml" /> -->
 		<!-- <mapping resource="com/hlql/many2many/many2many.hbm.xml" /> -->
 		<mapping resource="com/hlql/example/domain/example.hbm.xml" />
+		<!-- 放在二级缓存中的对象 -->
+		<class-cache usage="read-only" class="com.hlql.example.domain.Employee" region="EmployeeCache" />
 	</session-factory>
 </hibernate-configuration>
